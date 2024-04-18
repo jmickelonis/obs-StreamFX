@@ -53,6 +53,10 @@ using namespace streamfx::encoder::ffmpeg;
 
 debug::debug() : handler("") {}
 
+#if LIBAVUTIL_VERSION_MAJOR >= 59
+#define AV_OPT_TYPE_CHANNEL_LAYOUT AV_OPT_TYPE_CHLAYOUT
+#endif
+
 void debug::properties(ffmpeg_instance* instance, obs_properties_t* props)
 {
 	const AVCodec* codec = instance->get_avcodec();
