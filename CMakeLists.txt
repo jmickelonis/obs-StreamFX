@@ -28,6 +28,7 @@ set(CMAKE_MODULE_PATH
 	"${CMAKE_CURRENT_SOURCE_DIR}/cmake/clang"
 	"${CMAKE_CURRENT_SOURCE_DIR}/cmake/version"
 	"${CMAKE_CURRENT_SOURCE_DIR}/cmake"
+	"${CMAKE_SOURCE_DIR}/cmake/Modules"
 )
 
 # Include required Modules
@@ -1471,6 +1472,7 @@ if(STANDALONE)
 		)
 	endif()
 else()
+	include("ObsHelpers")
 	if(COMMAND setup_plugin_target)
 		setup_plugin_target(StreamFX)
 		# Seems like we lost the ability to customize which directoy resources are in, and instead are forced to use '/data'.
