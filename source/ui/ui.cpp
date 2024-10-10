@@ -72,7 +72,7 @@ streamfx::ui::handler::handler()
 
 	  _about_action(), _about_dialog(),
 
-	  _translator(), _updater()
+	  _translator()
 {
 	obs_frontend_add_event_callback(frontend_event_handler, this);
 }
@@ -164,7 +164,7 @@ void streamfx::ui::handler::on_obs_loaded()
 		}
 
 		// Create the updater.
-		_updater = streamfx::ui::updater::instance(_menu);
+		// _updater = streamfx::ui::updater::instance(_menu);
 
 		_menu->addSeparator();
 
@@ -198,7 +198,7 @@ void streamfx::ui::handler::on_obs_loaded()
 	}
 
 	// Let the Updater start its work.
-	this->_updater->obs_ready();
+	// this->_updater->obs_ready();
 }
 
 void streamfx::ui::handler::on_obs_exit()

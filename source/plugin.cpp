@@ -9,7 +9,7 @@
 
 #include "configuration.hpp"
 #include "ui/ui.hpp"
-#include "updater.hpp"
+// #include "updater.hpp"
 
 #include "warning-disable.hpp"
 #include <fstream>
